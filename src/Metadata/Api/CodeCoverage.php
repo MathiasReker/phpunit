@@ -228,10 +228,10 @@ final class CodeCoverage
             return true;
         }
 
-        if ($metadataForClass->isCoversNothing()->isNotEmpty()) {
-            return false;
-        }
+        return ! ($metadataForClass->isCoversNothing()->isNotEmpty()) 
+             
+        
 
-        return true;
+         ;
     }
 }

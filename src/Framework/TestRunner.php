@@ -421,11 +421,11 @@ final class TestRunner
             return true;
         }
 
-        if ($metadata->isCoversNothing()->isNotEmpty()) {
-            return true;
-        }
+        return (bool) ($metadata->isCoversNothing()->isNotEmpty()) 
+             
+        
 
-        return false;
+         ;
     }
 
     private function canTimeLimitBeEnforced(): bool
@@ -463,11 +463,11 @@ final class TestRunner
             return false;
         }
 
-        if (extension_loaded('xdebug') && xdebug_is_debugger_active()) {
-            return false;
-        }
+        return ! (extension_loaded('xdebug') && xdebug_is_debugger_active()) 
+             
+        
 
-        return true;
+         ;
     }
 
     /**

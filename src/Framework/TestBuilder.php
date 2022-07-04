@@ -299,11 +299,11 @@ final class TestBuilder
             return true;
         }
 
-        if (MetadataRegistry::parser()->forMethod($className, $methodName)->isRunInSeparateProcess()->isNotEmpty()) {
-            return true;
-        }
+        return (bool) (MetadataRegistry::parser()->forMethod($className, $methodName)->isRunInSeparateProcess()->isNotEmpty()) 
+             
+        
 
-        return false;
+         ;
     }
 
     /**

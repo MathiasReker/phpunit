@@ -651,11 +651,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             return false;
         }
 
-        if ($this->hasExpectationOnOutput()) {
-            return false;
-        }
+        return ! ($this->hasExpectationOnOutput()) 
+             
+        
 
-        return true;
+         ;
     }
 
     /**

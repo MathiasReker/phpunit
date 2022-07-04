@@ -34,11 +34,11 @@ final class Registry
             serialize(self::get())
         );
 
-        if ($result) {
-            return true;
-        }
+        return (bool) ($result) 
+             
+        
 
-        return false;
+         ;
     }
 
     public static function loadFrom(string $path): void

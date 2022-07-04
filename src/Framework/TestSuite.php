@@ -657,10 +657,10 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
             return true;
         }
 
-        if ($this->stopOnIncomplete && Facade::hasTestMarkedIncompleteEvents()) {
-            return true;
-        }
+        return (bool) ($this->stopOnIncomplete && Facade::hasTestMarkedIncompleteEvents()) 
+             
+        
 
-        return false;
+         ;
     }
 }
